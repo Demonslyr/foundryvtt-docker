@@ -71,7 +71,7 @@ RUN addgroup --system --gid ${FOUNDRY_UID} foundry \
   sed \
   su-exec \
   tzdata \
-  && npm install && echo ${VERSION} > image_version.txt
+  && npx yarn install && echo ${VERSION} > image_version.txt
 
 VOLUME ["/data"]
 # HTTP Server
